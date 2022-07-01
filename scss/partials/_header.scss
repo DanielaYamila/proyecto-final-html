@@ -1,0 +1,15 @@
+@import "../base/base";
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: $principal;
+
+    .logo {
+        color: $color;
+        text-decoration: none;
+        padding: 20px;
+        font-size: 2em;
+        font-weight: bold;
+    }
+}

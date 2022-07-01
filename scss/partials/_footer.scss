@@ -1,0 +1,36 @@
+@import "../base/base";
+
+footer {
+    padding: 20px;
+    background-color: $principal;
+
+    .containerFooter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        p {
+            padding-bottom: 10px;
+            color: $color;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        img {
+            background-color: $color;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .letraFooter {
+            color: $color;
+            padding: 6px;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                color: rgb(128, 128, 128);
+            }
+        }
+    }
+}

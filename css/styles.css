@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #cecece; }
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: black; }
+  header .logo {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold; }
+
+nav {
+  background-color: black; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    nav ul li {
+      list-style: none;
+      margin: 15px;
+      padding: 10px; }
+      nav ul li a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 10px; }
+        nav ul li a:hover {
+          color: gray; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  main h1 {
+    font-size: 2em;
+    margin: 15px; }
+  main h2, main h3 {
+    font-size: 1.50em;
+    margin-bottom: 15px; }
+  main p {
+    font-size: 1.25em;
+    padding: 10px; }
+  main section {
+    margin: 10px;
+    padding: 10px; }
+    main section#presentacion {
+      padding: 10px 12px;
+      margin: 10px 10px; }
+  main .galeria {
+    margin: 10px; }
+    main .galeria .three-columns {
+      display: inline-block; }
+      main .galeria .three-columns img {
+        border-radius: 4px; }
+  main button {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black; }
+    main button:hover {
+      background-color: #a7a1a1; }
+
+form {
+  margin: 15px;
+  padding: 10px; }
+  form label {
+    color: black;
+    font-family: "Nunito", sans-serif; }
+  form button.btn {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black; }
+    form button.btn:hover {
+      background-color: #a7a1a1; }
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 10px; }
+
+footer {
+  padding: 20px;
+  background-color: black; }
+  footer .containerFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    footer .containerFooter p {
+      padding-bottom: 10px;
+      color: white;
+      font-size: 0.85em;
+      font-weight: bold; }
+    footer .containerFooter img {
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px; }
+    footer .containerFooter .letraFooter {
+      color: white;
+      padding: 6px;
+      font-weight: bold;
+      text-decoration: none; }
+      footer .containerFooter .letraFooter:hover {
+        color: gray; }

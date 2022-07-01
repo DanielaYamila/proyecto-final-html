@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(206, 206, 206);
+}
+
+@import "base/base";
+@import "partials/header";
+@import "partials/navbar";
+@import "partials/main";
+@import "partials/form";
+@import "partials/aside";
+@import "partials/footer";

@@ -1,0 +1,23 @@
+@import "../base/base";
+
+form {
+    margin: 15px;
+    padding: 10px;
+
+    label {
+        color: $principal;
+        font-family: $font;
+    }
+
+    button.btn {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid $principal;
+
+        &:hover {
+            background-color: rgb(167, 161, 161);
+        }
+    }
+}
