@@ -6,10 +6,8 @@ header {
     background-color: $principal;
 
     .logo {
-        color: $color;
-        text-decoration: none;
+        @include letraa ( $secundario , bold , none );
         padding: 20px;
         font-size: 2em;
-        font-weight: bold;
     }
 }

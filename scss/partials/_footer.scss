@@ -1,36 +1,30 @@
 @import "../base/base";
+@import "../base/mixins";
 
 footer {
+    @include flex (flex, column, center);
     padding: 20px;
-    background-color: $principal;
+    background-color: $secundario;
 
-    .containerFooter {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+    p {
+        padding-bottom: 10px;
+        color: $secundario;
+        font-size: map-get($letters, $p);
+        font-weight: bold;
+    }
 
-        p {
-            padding-bottom: 10px;
-            color: $color;
-            font-size: 0.85em;
-            font-weight: bold;
-        }
+    img {
+        background-color: $color;
+        border-radius: 10px;
+        padding: 10px;
+    }
 
-        img {
-            background-color: $color;
-            border-radius: 10px;
-            padding: 10px;
-        }
+    .letraFooter {
+        @include letraa ($secundario, bold, none);
+        padding: 6px;
 
-        .letraFooter {
-            color: $color;
-            padding: 6px;
-            font-weight: bold;
-            text-decoration: none;
-
-            &:hover {
-                color: rgb(128, 128, 128);
-            }
+        &:hover {
+            color: rgb(128, 128, 128);
         }
     }
 }

@@ -1,3 +1,14 @@
-$font: 'Nunito', sans-serif;
-$color: white;
+$font: 'Nunito',
+sans-serif;
+$secundario: white;
 $principal: black;
+
+$letters:(
+    h1: 2em,
+    h3: 1.50em,
+    p: 1, 25em,
+);
+
+div {
+    margin: 10px;
+}

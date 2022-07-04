@@ -1,11 +1,11 @@
 @import "../base/base";
+@import "../base/mixins";
 
 nav {
     background-color: $principal;
 
     ul {
-        display: flex;
-        flex-direction: row;
+        @include flex ( flex , row , none );
         justify-content: space-evenly;
 
         li {
@@ -14,10 +14,8 @@ nav {
             padding: 10px;
 
             a {
-                color: $color;
-                font-weight: bold;
-                text-decoration: none;
-                margin: 10px;
+                @include letraa ( $secundario , bold , none );
+                @extend div;
 
                 &:hover {
                     color: rgb(128, 128, 128);

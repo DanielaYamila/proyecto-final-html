@@ -1,11 +1,10 @@
 @import "../base/base";
+@import "../base/mixins";
 
 aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $color;
+    @include flex ( flex , column , center);
+    background-color: $secundario;
     border-radius: 10px;
     border: 1px solid $principal;
-    margin: 10px;
+    @extend div ;
 }
