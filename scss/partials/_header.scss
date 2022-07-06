@@ -1,13 +1,21 @@
-@import "../base/base";
-
 header {
     display: flex;
     justify-content: center;
     background-color: $principal;
 
+    @media (max-width: 414px){
+        margin: 0;
+        @include flex ( flex , column , center );
+        background-color: $secundario;
+    }
+    
     .logo {
         @include letraa ( $secundario , bold , none );
         padding: 20px;
         font-size: 2em;
+        @media (max-width: 414px){
+            margin: 0;
+            @include letraa ( $principal , bold , none );
+        }
     }
 }

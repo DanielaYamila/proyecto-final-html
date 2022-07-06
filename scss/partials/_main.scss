@@ -1,26 +1,36 @@
-@import "../base/base";
-@import "../base/mixins";
-
 main {
     @include flex ( flex , column , center );
 
+    @media (max-width:414px) {
+        margin: 0;
+        @include flex ( flex , column , center );
+    }
+
     h1 {
-        font-size: map-get($letters, $h1 );
+        font-size: 3em;
         margin: 15px;
+        @media (max-width:414px) {
+            font-size: 2em;
+        }
     }
      
     h2, h3 {
-        font-size: map-get($letters, $h3 );
+        font-size: 2em;
         margin-bottom: 15px;
+        @media (max-width:414px) {
+            font-size: 1, 30em;
+        }
     }
      
     p {
-        font-size: map-get($letters, $p );
+        font-size: 2em;
         padding: 10px;
-    } 
+        @media (max-width:414px) {
+            font-size: 1, 20em;
+        }
+    }
 
     section {
-        @extend div ;
         padding: 10px;
 
         &#presentacion {
@@ -30,10 +40,20 @@ main {
     }
 
     .galeria {
-        @extend div ;
+        margin: 10px;
 
         .three-columns {
             display: inline-block;
+
+            img {
+                height: 300px;
+                width: 300px;
+
+                @media (max-width:414px) {
+                    height: 200px;
+                    width: 200px;
+                }
+            }
         }
     }
 
