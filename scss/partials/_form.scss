@@ -1,17 +1,19 @@
 form {
-    margin: 15px;
-    padding: 10px;
+    background-color: $secundario;
+    border-radius: 10px;
+    border: 1px solid $principal;
+    @include margen (60px, 40px);
 
     label {
         color: $principal;
         font-family: $font;
     }
 
-    button.btn {
-        @include button ( 15px , bold , 10px 20px , 10px , 1px solid $principal );
+    .btn {
+        @include button ($efecto, 15px, bold, 10px 20px, 10px, 1px solid $principal);
 
         &:hover {
-            background-color: rgb(167, 161, 161);
+            background-color: $panel;
         }
     }
 }

@@ -1,18 +1,27 @@
-$font: 'Nunito',sans-serif;
-$secundario: white;
-$principal: black;
+$font: 'Nunito', sans-serif;
+$panel: #FB6090;
+$secundario: #FFC5D0;
+$principal: #821D30;
+$efecto: white;
+
 @mixin flex($dis, $direction, $text) {
     display: $dis;
     flex-direction: $direction;
     text-align: $text;
 }
 
-@mixin button($font-s, $font-w, $padd, $border-r, $border) {
+@mixin button($colour, $font-s, $font-w, $padd, $border-r, $border) {
+    background-color: $colour;
     font-size: $font-s;
     font-weight: $font-w;
     padding: $padd;
     border-radius: $border-r;
     border: $border;
+}
+
+@mixin margen($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
 }
 
 @mixin letraa($color, $fontw, $textd) {

@@ -1,67 +1,158 @@
 main {
-    @include flex ( flex , column , center );
+    @include flex (flex, column, center);
 
     @media (max-width:414px) {
-        margin: 0;
-        @include flex ( flex , column , center );
-    }
-
-    h1 {
-        font-size: 3em;
-        margin: 15px;
-        @media (max-width:414px) {
-            font-size: 2em;
-        }
-    }
-     
-    h2, h3 {
-        font-size: 2em;
-        margin-bottom: 15px;
-        @media (max-width:414px) {
-            font-size: 1, 30em;
-        }
-    }
-     
-    p {
-        font-size: 2em;
-        padding: 10px;
-        @media (max-width:414px) {
-            font-size: 1, 20em;
-        }
+        @include flex (flex, column, center);
+        @include margen (0, 0);
     }
 
     section {
-        padding: 10px;
-
-        &#presentacion {
-            padding: 10px 12px;
-            margin: 10px 10px;
+        .fondoColor {
+            background-color: $secundario;
         }
-    }
 
-    .galeria {
-        margin: 10px;
+        h1 {
+            @include margen (30px, 0);
+            font-size: 3em;
 
-        .three-columns {
-            display: inline-block;
+            @media (max-width:414px) {
+                font-size: 1em;
+            }
+        }
 
-            img {
-                height: 300px;
-                width: 300px;
+        h2,
+        h3 {
+            @include margen (20px, 15px);
+            font-size: 2em;
 
-                @media (max-width:414px) {
-                    height: 200px;
-                    width: 200px;
+            @media (max-width:414px) {
+                font-size: 1em;
+            }
+        }
+
+        p {
+            @include margen (10px, 0);
+            font-size: 2em;
+
+            @media (max-width:362px) {
+                font-size: 20px;
+            }
+        }
+
+        #titulo {
+            @include margen (15px, 20px);
+        }
+
+        .cartas {
+            background-color: $secundario;
+            display: flex;
+            justify-content: center;
+
+            @media (max-width:414px) {
+                @include flex (flex, column, none);
+                @include margen (0, 0);
+                align-items: center;
+            }
+
+            div {
+                @include margen (0, 15px);
+
+                p {
+                    font-size: 20px;
                 }
             }
         }
-    }
 
-    button {
-        @include button ( 15px , bold , 10px 20px , 10px , 1px solid $principal );
+        #hecho {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            padding: $panel;
+        }
 
-        &:hover {
-            background-color: rgb(167, 161, 161);
+        #informacion {
+            @include margen (0, 0);
+            background-color: $secundario;
+
+            h2 {
+                @include margen (50px, 0);
+            }
+
+            p {
+                @include margen (30px 80px, 0);
+                font-size: 1.5rem;
+            }
+        }
+
+
+        .carousel-caption {
+
+            h5 {
+                background-color: $efecto;
+                font-size: 2rem;
+                color: black;
+
+                @media (max-width:1198px) {
+                    font-size: 24px;
+                }
+
+                @media (max-width:802px) {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                background-color: $panel;
+                color: $efecto;
+
+                @media (max-width:1198px) {
+                    font-size: 24px;
+                }
+
+                @media (max-width:802px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width:362px) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        #presentacion {
+            @include margen (10px 12px, 10px 10px);
+        }
+
+        .galeria {
+            @include margen (0, 10px);
+
+            .three-columns {
+                display: inline-block;
+
+                img {
+                    height: 400px;
+                    width: 300px;
+
+                    @media (max-width:414px) {
+                        height: 200px;
+                        width: 200px;
+                    }
+
+                    @media (max-width:362px) {
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            @include button ($principal, 15px, bold, 10px 20px, 10px, 1px solid $principal);
+            color: $efecto;
+
+            &:hover {
+                background-color: $panel;
+            }
         }
     }
 }

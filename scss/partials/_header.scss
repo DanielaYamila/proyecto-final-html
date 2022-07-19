@@ -1,21 +1,22 @@
 header {
+    font-family: 'Ubuntu', sans-serif;
     display: flex;
     justify-content: center;
-    background-color: $principal;
+    background-color: $panel;
 
-    @media (max-width: 414px){
-        margin: 0;
-        @include flex ( flex , column , center );
-        background-color: $secundario;
+    @media (max-width: 414px) {
+        @include flex (flex, column, center);
+        @include margen (0, 0);
     }
-    
+
     .logo {
-        @include letraa ( $secundario , bold , none );
-        padding: 20px;
+        @include letraa ($efecto, bold, none);
+        @include margen (20px, 0);
         font-size: 2em;
-        @media (max-width: 414px){
-            margin: 0;
-            @include letraa ( $principal , bold , none );
+
+        @media (max-width: 414px) {
+            @include letraa ($efecto, bold, none);
+            @include margen (0, 0);
         }
     }
 }
